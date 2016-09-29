@@ -23,3 +23,29 @@
 
 	background-color: #ececec;
 }
+
+div.chairs-map {
+	padding: 10px;
+}
+
+div.chair {
+	width: 95px;
+	height: 88px;
+	border: 1px solid #ccc;
+	text-align: center;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+div.chair .chair-label {
+	display: block;
+	font-weight: bold;
+	margin-top: 3px;
+}
+
+div.chair:hover {
+	background-color: #fafafa;
+	border-color: #999;
+}

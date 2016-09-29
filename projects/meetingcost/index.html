@@ -40,11 +40,11 @@
 				</div>
 
 				<div style="float: left; margin-right: 10px;">
-					<button class="btn btn-lg btn-default">
+					<button class="btn btn-lg btn-default js-start-time">
 						<i class="fa fa-play" aria-hidden="true"></i>
 						<span class="hidden-xs">Start</span>
 					</button>
-					<button class="btn btn-lg btn-default">
+					<button class="btn btn-lg btn-default js-stop-time">
 						<i class="fa fa-stop" aria-hidden="true"></i>
 						<span class="hidden-xs">Stop</span>
 					</button>
@@ -89,12 +89,41 @@
 					</button>
 				</div>
 
+				<div style="float:right;">
+					<button class="btn btn-lg btn-default js-reset">
+						<span class="hidden-xs">Reset</span>
+					</button>
+				</div>
+
 				<div class="clearfix"></div>
 			</div>
 
 			<div class="chairs-map"></div>
 
 		</div><!-- /.container -->
+
+		<!-- Lodash templates -->
+<script type="text/template" id="chairContainerTemplate">
+
+<% if(_.isEmpty(app.meetingCost.participants)) { %>
+
+	<p><em>No participants have been added yet.</em></p>
+
+<% } else { %>
+
+	<% _.each(app.meetingCost.participants, function(value, index) { %>
+
+		<div class="chair js-remove-user" data-user-index="<%- index %>">
+			<i class="fa fa-user fa-3x" aria-hidden="true"></i>
+			<span class="chair-label"><%- value.label %></span>
+		</div>
+
+	<% }) %>
+
+<% } %>
+
+
+</script>
 
 
 		<!-- Bootstrap core JavaScript
