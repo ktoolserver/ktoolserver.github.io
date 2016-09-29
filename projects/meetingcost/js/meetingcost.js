@@ -50,8 +50,12 @@ $(function() {
 			app.meetingCost.subtractTime(amount, dateType);
 		});
 
-		// Prepare the Lodash template
+		// Prepare the Lodash templates
 		app.meetingCost.chairContainerTemplate = _.template($('#chairContainerTemplate').html());
+
+		app.meetingCost.ratesSelectTemplate = _.template($('#ratesSelectTemplate').html());
+
+		$('.js-user-type-select').html(app.meetingCost.ratesSelectTemplate());
 
 		// Initializes other re-resettable values
 		app.meetingCost.reset();
@@ -100,7 +104,12 @@ $(function() {
 		console.log(userType);
 		console.log(rateData);
 
-		app.meetingCost.participants.push(rateData);
+		// Don't add if it's the "Choose participants" option
+		if (rateData) {
+			app.meetingCost.participants.push(rateData);
+		}
+
+		
 
 		app.meetingCost.recalculateCost();
 
