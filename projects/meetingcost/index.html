@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="A helper tool to calculate the cost of public service meetings, based on the TBS Rates of Pay.">
+		<meta name="author" content="https://twitter.com/sboots2">
 		<!-- <link rel="icon" href="../../favicon.ico"> -->
 
 		<title>Meeting Cost Calculator</title>
@@ -40,22 +40,22 @@
 				</div>
 
 				<div style="float: left; margin-right: 10px;">
-					<button class="btn btn-lg btn-default js-start-time">
+					<button class="btn btn-lg btn-default js-start-time" title="Start Timer">
 						<i class="fa fa-play" aria-hidden="true"></i>
 						<span class="hidden-xs">Start</span>
 					</button>
-					<button class="btn btn-lg btn-default js-stop-time">
+					<button class="btn btn-lg btn-default js-stop-time" title="Stop Timer">
 						<i class="fa fa-stop" aria-hidden="true"></i>
 						<span class="hidden-xs">Stop</span>
 					</button>
 				</div>
 
 				<div style="float: left;">
-					<button class="btn btn-lg btn-default js-add-time" data-amount="15" data-date-type="minutes">
+					<button class="btn btn-lg btn-default js-add-time" data-amount="15" data-date-type="minutes" title="Add 15 minutes">
 						<i class="fa fa-plus" aria-hidden="true"></i>
 						<span class="hidden-xs">15 min</span>
 					</button>
-					<button class="btn btn-lg btn-default js-remove-time" data-amount="15" data-date-type="minutes">
+					<button class="btn btn-lg btn-default js-remove-time" data-amount="15" data-date-type="minutes" title="Subtract 15 minutes">
 						<i class="fa fa-minus" aria-hidden="true"></i>
 						<span class="hidden-xs">15 min</span>
 					</button>
@@ -80,14 +80,15 @@
 				</div>
 
 				<div style="float:left; margin-right: 10px;">
-					<button class="btn btn-lg btn-default js-add-user">
+					<button class="btn btn-lg btn-default js-add-user" title="Add Participant">
 						<i class="fa fa-user-plus" aria-hidden="true"></i>
-						<span class="hidden-xs">Add User</span>
+						<span class="hidden-xs">Add Participant</span>
 					</button>
 				</div>
 
 				<div style="float:right;">
-					<button class="btn btn-lg btn-default js-reset">
+					<button class="btn btn-lg btn-default js-reset" title="Reset all participants">
+						<span class="visible-xs"><i class="fa fa-close" aria-hidden="true"></i></span>
 						<span class="hidden-xs">Reset</span>
 					</button>
 				</div>
