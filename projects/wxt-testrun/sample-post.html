@@ -126,31 +126,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <style type="text/css">
 	
-	.heading-container {
-		background-color: blue;
-		width: 100%;
-		padding: 50px;
-		margin-top: 32px;
-		margin-bottom: 32px;
-	}
 
-	/* With thanks to
-	http://dabblet.com/gist/2994237 */
-	.heading-container h2 { width:450px; font:bold 36px sans-serif; letter-spacing:-1px; color:#000; }
-
-	.heading-container .wrap {
-		box-shadow: -10px 0 0 10px #FFF, 10px 0 0 10px #FFF;
-	}
-	.heading-container .inner {
-		background: #FFF;
-		position:relative;
-	}
 
 	.heading-container.sky {
 		background: url(img/flight-mountains.jpg) no-repeat center right #333;
 		background-size: cover;
 		padding-top: 150px;
+		padding-bottom: 30px;
 
+	}
+
+	.padded-multiline { 
+	  line-height: 1.4; 
+	  padding: 2px 0; 
+	  width: 400px;
+	  margin: 20px;
+	  margin-left: 120px;
+	}
+	.padded-multiline span { 
+	  background-color: #333;
+	  color: #fff; 
+	  display: inline;
+	  padding: 0.55rem;
+	  
+	  /* Needs prefixing */
+	  box-decoration-break: clone;
 	}
 
 
@@ -178,12 +178,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 <div class="heading-container sky">
-	<h2 style="font-size: 42px;">
+	<h2 class="padded-multiline">
 		<span class="wrap">
-			<span class="inner">
-				<span>Beginning the Conversation…</span><br/>
-				<span style="font-weight:normal; font-size: 36px;">A Made-in-Canada Approach to Digital Government</span>
-			</span>
+			<span>Beginning the Conversation…</span><br/>
+			<span>A Made-in-Canada Approach to Digital Government</span>
 		</span>
 	</h2>
 </div>
