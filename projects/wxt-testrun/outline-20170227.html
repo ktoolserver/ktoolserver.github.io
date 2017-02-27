@@ -128,16 +128,114 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	
 	.heading-container {
 		width: 100%;
-		padding: 50px;
+		
 		margin-top: 32px;
 		margin-bottom: 32px;
 		background-color: #333;
+		color: #fff; 
+	}
+
+	/* Thanks to 
+	https://css-tricks.com/multi-line-padded-text/
+	*/
+	.padded-multiline { 
+	  line-height: 1.4; 
+	  padding: 2px 0; 
+	  width: 530px;
+	 /* margin: 20px;
+	  margin-left: 40px;*/
+	}
+	.padded-multiline span { 
+	  background-color: #3a3a3a;
+	  color: #fff; 
+	  display: inline;
+	  
+	  /* Needs prefixing */
+	  box-decoration-break: clone;
 	}
 
 
-	.heading-container h2 {
-		font-size: 40px;
-		color: #fff; 
+	@media (min-width: 1px) {
+
+		.heading-container {
+			padding: 20px;
+		}
+
+		.heading-container h2 {
+			font-size: 22px;
+		}
+
+		.padded-multiline span { 
+			padding: 0.5rem;
+		}
+
+		.heading-container h2.padded-multiline.title {
+			font-size: 32px;
+		}
+		.heading-container h2.padded-multiline.title span {
+			padding: 0.7rem;
+		}
+
+		.padded-multiline.subtitle {
+			font-size: 22px;
+		}
+		.heading-container h2.padded-multiline.subtitle span {
+			padding: 0.7rem;
+		}
+
+	}
+
+	@media (min-width: 500px) {
+
+		.heading-container {
+			padding: 30px;
+		}
+
+		.heading-container h2 {
+			font-size: 30px;
+		}
+
+		.padded-multiline span { 
+			padding: 0.7rem;
+		}
+
+		.heading-container h2.padded-multiline.title {
+			font-size: 38px;
+		}
+		.heading-container h2.padded-multiline.title span {
+			padding: 0.9rem;
+		}
+
+		.padded-multiline.subtitle {
+			font-size: 30px;
+		}
+		.heading-container h2.padded-multiline.subtitle span {
+			padding: 0.9rem;
+		}
+
+	}
+
+	@media (min-width: 650px) {
+
+		.heading-container {
+			padding: 50px;
+		}
+
+		.heading-container h2 {
+			font-size: 40px;
+			
+		}
+
+		.padded-multiline span { 
+			padding: 1rem;
+		}
+
+		.heading-container h2.padded-multiline.title {
+			font-size: 46px;
+		}
+		.padded-multiline.subtitle {
+			font-size: 36px;
+		}
 
 	}
 
@@ -241,12 +339,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 	/*Comment sidebars*/
-	.comment-panel.pull-right {
-		margin-left: 20px;
+
+	/* Matching extra margins to the medium breakpoint */
+	@media (min-width: 992px) {
+		.comment-panel.pull-right {
+			margin-left: 20px;
+		}
+		.comment-panel.pull-left {
+			margin-right: 20px;
+		}
 	}
-	.comment-panel.pull-left {
-		margin-right: 20px;
-	}
+
 	.comment-panel {
 		color: #fff;
 		color: #fff;
@@ -284,32 +387,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 	}
 
-	/* Thanks to 
-	https://css-tricks.com/multi-line-padded-text/
-	*/
-	.padded-multiline { 
-	  line-height: 1.4; 
-	  padding: 2px 0; 
-	  width: 530px;
-	 /* margin: 20px;
-	  margin-left: 40px;*/
-	}
-	.padded-multiline span { 
-	  background-color: #3a3a3a;
-	  color: #fff; 
-	  display: inline;
-	  padding: 1rem;
-	  
-	  /* Needs prefixing */
-	  box-decoration-break: clone;
-	}
-
-	.heading-container h2.padded-multiline.title {
-		font-size: 46px;
-	}
-	.padded-multiline.subtitle {
-		font-size: 36px;
-	}
+	
 
 
 	/* Comments from open.canada.ca */
@@ -337,10 +415,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <div class="heading-container sky">
 	<h2 class="padded-multiline title">
-		<span>Beginning the&nbsp; &nbsp;Conversation…</span>
+		<span>Beginning the <br/>&nbsp;Conversation…</span>
 	</h2>
 	<p class="padded-multiline subtitle">
-		<span>A Made-in-Canada Approach&nbsp; &nbsp;to Digital Government</span>
+		<span>A Made-in-Canada Approach <br/>&nbsp;to Digital Government</span>
 	</p>
 </div>
 
@@ -405,7 +483,7 @@ Nunc sed volutpat lacus. Pellentesque lacinia augue quis nibh sodales lacinia. S
 
 <div class="heading-container hub">
 	<h2 class="padded-multiline">
-		<span>Starting a Conversation&nbsp; &nbsp;on a Made-in-Canada&nbsp; &nbsp;Approach</span>
+		<span>Starting a Conversation <br/>&nbsp;on a Made-in-Canada <br/>&nbsp;Approach</span>
 	</h2>
 </div>
 
@@ -431,7 +509,7 @@ Nunc sed volutpat lacus. Pellentesque lacinia augue quis nibh sodales lacinia. S
 
 <div class="heading-container calgary">
 	<h2 class="padded-multiline">
-		<span>Organizing to&nbsp; &nbsp;Deliver&nbsp;Digital</span>
+		<span>Organizing to <br/>&nbsp;Deliver&nbsp;Digital</span>
 	</h2>
 </div>
 
@@ -476,7 +554,7 @@ Nunc sed volutpat lacus. Pellentesque lacinia augue quis nibh sodales lacinia. S
 
 <div class="heading-container montreal">
 	<h2 class="padded-multiline">
-		<span>Digital Service Design and&nbsp; &nbsp;Delivery</span>
+		<span>Digital Service Design and <br/>&nbsp;Delivery</span>
 	</h2>
 </div>
 
@@ -496,7 +574,7 @@ Nunc sed volutpat lacus. Pellentesque lacinia augue quis nibh sodales lacinia. S
 
 <div class="heading-container vancouver">
 	<h2 class="padded-multiline">
-		<span>Putting in Place the&nbsp; &nbsp;Right&nbsp;Foundations</span>
+		<span>Putting in Place the <br/>&nbsp;Right&nbsp;Foundations</span>
 	</h2>
 </div>
 
@@ -522,7 +600,7 @@ Nunc sed volutpat lacus. Pellentesque lacinia augue quis nibh sodales lacinia. S
 
 <div class="heading-container ottawa">
 	<h2 class="padded-multiline">
-		<span>Continuing the&nbsp; &nbsp;Conversation</span>
+		<span>Continuing the <br/>&nbsp;Conversation</span>
 	</h2>
 </div>
 
